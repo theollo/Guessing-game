@@ -3,10 +3,8 @@ import java.util.Scanner;
 
 public class SecretNumber {
     public static void main(String[] args) {
-        //Prompt a user to input their favourite chocolate
         System.out.println("What is the secret number between 1 and 10?");
-        //Collect user input
-        Scanner reader = new Scanner(System.in); //creates scanner object
+        Scanner reader = new Scanner(System.in);
         String guessingGame = reader.nextLine();
 
         if (guessingGame.equals("4")) {
@@ -30,10 +28,6 @@ public class SecretNumber {
         } else if (guessingGame.equals("10")){
             System.out.println("Incorrect!");
         }
-        //Ternary operator - this is a bit advanced for right now.
-        //variable = (condition) ? expressionTrue : expressionFalse;
-        //shorthand for if...else
-        // String result = favouriteChocolate.equals("Bounty")? "Gross" :"Yum";
-        // System.out.println(result);
+
     }
 }
