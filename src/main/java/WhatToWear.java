@@ -1,22 +1,24 @@
-package org.example;
-import java.sql.SQLOutput;
-import java.util.Scanner;
 
-public class WhatChocolate {
+public class WhatToWear {
     public static void main(String[] args) {
-        //Prompt a user to input their favourite chocolate
-        System.out.println("What is your favourite chocolate?");
-        //Collect user input
-        Scanner reader = new Scanner(System.in); //creates scanner object
-        String favouriteChocolate = reader.nextLine();
-        //if chocolate is bounty, print "gross"
-        //otherwise prjnt "yum"
-        if (favouriteChocolate.equals("Bounty")) {
-            System.out.println("Gross");
-        } else if (favouriteChocolate.equals("Crunchie")){
-            System.out.println("The best!");
+
+        boolean rain = true;
+        boolean cloudy = true;
+        boolean sunny = false;
+        boolean snow = false;
+        int temp = 11;
+
+        System.out.println("What should I wear today?");
+        if (snow && temp < 12) {
+            System.out.println("A coat!");
+        } else if (sunny || temp > 18){
+            System.out.println("A T shirt!");
+        } else if (cloudy && rain){
+            System.out.println("A jumper and a waterproof jacket");
+        } else if (rain){
+            System.out.println("A waterproof jacket");
         } else {
-            System.out.println("Yum");
+            System.out.println("I'm not sure");
         }
     }
 }
